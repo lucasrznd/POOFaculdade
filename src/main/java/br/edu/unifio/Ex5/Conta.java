@@ -29,6 +29,6 @@ public class Conta {
     }
 
     public void atualizar(double taxa) {
-        this.saldo += this.saldo * taxa;
+        this.saldo -= this.saldo * taxa;
     }
 }
