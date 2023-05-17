@@ -11,6 +11,8 @@ public class TestaConta {
         ContaCorrente cc = new ContaCorrente();
         ContaPoupanca cp = new ContaPoupanca();
 
+        Conta c1 = new Conta();
+
         c.depositar(1000);
         cc.depositar(1000);
         cp.depositar(1000);
