@@ -9,9 +9,9 @@ public class TesteCadastro {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        List<Pessoa> pessoas = new ArrayList<>();
         System.out.print("Quantas pessoas serão cadastradas?: ");
         int qtdPessoa = sc.nextInt();
+        CadastroPessoa cadastro = new CadastroPessoa(qtdPessoa);
 
         for(int i = 1; i <= qtdPessoa; i++) {
             System.out.println("\nDados da pessoa #" + i + ": ");
@@ -31,21 +31,22 @@ public class TesteCadastro {
             if(tipoPessoa == 'c') {
                 System.out.print("Código: ");
                 int codigo = sc.nextInt();
-                pessoas.add(new Cliente(nome, dataNascimento, codigo));
+                Cliente cliente = new Cliente(nome, dataNascimento, codigo);
+                cadastro.cadastrarPessoa(cliente);
             } else if(tipoPessoa == 'f') {
                 System.out.print("Salário R$ ");
                 double salario = sc.nextDouble();
-                pessoas.add(new Funcionario(nome, dataNascimento, salario));
+                Funcionario funcionario = new Funcionario(nome, dataNascimento, salario);
+                cadastro.cadastrarPessoa(funcionario);
             } else {
                 System.out.print("Salário R$ ");
                 double salario = sc.nextDouble();
                 System.out.print("Area: ");
                 String area = sc.next();
-                pessoas.add(new Gerente(nome, dataNascimento, salario, area));
+                Gerente gerente = new Gerente(nome, dataNascimento, salario, area);
+                cadastro.cadastrarPessoa(gerente);
             }
         }
-        for(Pessoa p : pessoas) {
-            p.imprimirDados();
-        }
+        cadastro.imprimirCadastro();
     }
 }
