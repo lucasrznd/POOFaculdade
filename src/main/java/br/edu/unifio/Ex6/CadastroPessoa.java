@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CadastroPessoa {
     private int qtdAtual;
-    List<Pessoa> pessoa = new ArrayList<>();
+    List<Pessoa> pessoas = new ArrayList<>();
 
     public CadastroPessoa() {
 
@@ -24,12 +24,12 @@ public class CadastroPessoa {
     }
 
     public void cadastrarPessoa(Pessoa pessoa) {
-        this.pessoa.add(pessoa);
+        this.pessoas.add(pessoa);
     }
 
     public void imprimirCadastro() {
-        for(Pessoa p : pessoa) {
-            System.out.println(p);
+        for(Pessoa p : pessoas) {
+            p.imprimirDados();
         }
     }
 }

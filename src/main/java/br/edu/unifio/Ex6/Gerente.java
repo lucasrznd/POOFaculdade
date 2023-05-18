@@ -28,6 +28,5 @@ public class Gerente extends Funcionario{
     @Override
     public void imprimirDados() {
         super.imprimirDados();
-        System.out.println("\nSalário: " + (getSalario() -   calcularImposto()));
     }
 }

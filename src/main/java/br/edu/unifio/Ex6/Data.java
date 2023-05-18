@@ -38,4 +38,9 @@ public class Data {
     public void setAno(int ano) {
         this.ano = ano;
     }
+
+    @Override
+    public String toString() {
+        return getDia() + "/" + getMes() + "/" + getAno();
+    }
 }
