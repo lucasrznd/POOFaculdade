@@ -22,7 +22,8 @@ public class Cliente extends Pessoa {
 
     @Override
     public void imprimirDados() {
-        System.out.println("Código: " + getCodigo());
+        System.out.println("\nDados do Cliente: ");
         super.imprimirDados();
+        System.out.println("Código: " + getCodigo());
     }
 }

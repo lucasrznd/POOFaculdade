@@ -26,6 +26,7 @@ public class Funcionario extends Pessoa{
 
     @Override
     public void imprimirDados() {
+        System.out.println("\nDados do Funcionário: ");
         super.imprimirDados();
         System.out.println("Salário: " + (getSalario() -   calcularImposto()));
     }

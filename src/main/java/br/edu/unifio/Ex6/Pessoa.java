@@ -30,7 +30,7 @@ public class Pessoa {
     }
 
     public void imprimirDados() {
-        System.out.println("\nNome: " + getNome()
+        System.out.println("Nome: " + getNome()
                 + "\nData de Nascimento: " + getDataNascimento());
     }
 }
