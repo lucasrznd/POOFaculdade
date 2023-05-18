@@ -1,7 +1,5 @@
 package br.edu.unifio.Ex6;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class TesteCadastro {
